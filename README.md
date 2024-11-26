@@ -2,7 +2,7 @@
 This is the content for the 1 day workshop of FoundationaLLM Custom Copilot for Microsoft
 
 ## Requirements
-- We need an instance of 50 users available and ready for the workshop
+  We need an instance of 50 users available and ready for the workshop
 
 ## Agenda
 **Lecture1:** Where everything is, how to deploy (no deployment), Explain the resource Group and its resources and demonstrate the Management Portal, including Branding.
