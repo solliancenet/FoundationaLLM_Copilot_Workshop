@@ -5,8 +5,8 @@ This is the content for the 1 day workshop of FoundationaLLM Custom Copilot for 
 - We need an instance of 50 users available and ready for the workshop
 
 ## Agenda
-Lecture1: Where everything is, how to deploy (no deployment), Explain the resource Group and its resources and demonstrate the Management Portal, including Branding.
-Lab1: Management Portal Discovery and capabilities - RBAC - Permission and Access (Share between 2 users to give access to each other)
+**Lecture1:** Where everything is, how to deploy (no deployment), Explain the resource Group and its resources and demonstrate the Management Portal, including Branding.
+**Lab1:** Management Portal Discovery and capabilities - RBAC - Permission and Access (Share between 2 users to give access to each other)
 
 Lecture2: Demonstrate the Chat Portal and it capabilities
 Lab2: Chat Portal Discovery and capabilities
