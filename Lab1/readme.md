@@ -12,7 +12,7 @@ Navigate to the Agents section and check out the existing agents under `All Agen
 
 ![All agents](/media/Lab1-2.jpg)
 
-## Click on an agent edit gear to view its details.
+### Click on an agent edit gear to view its details.
 
 ![Agent details](/media/Lab1-3.jpg)
 
