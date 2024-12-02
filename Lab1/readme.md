@@ -1,4 +1,4 @@
-## Management Portal Discovery and capabilities
+## LAB 1 - Management Portal Discovery and capabilities
 
 In this lab, we will explore the Management Portal and its capabilities. We will also look at Role-Based Access Control (RBAC) and how to share permissions and access between two users.
 
