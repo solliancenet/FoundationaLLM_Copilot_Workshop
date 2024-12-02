@@ -18,3 +18,10 @@ Navigate to the Agents section and check out the existing agents under `All Agen
 
 ### Task 3: Role-Based Access Control (RBAC)
 Click on the `Access Control` button and view the current association of permissions for different `Users` and `groups`. Also notice the button for `Add role assignment for this resource` where you can assign roles to users or groups with granular permissions.
+`Try it out`
+
+![Access Control](/media/Lab1-4.jpg)
+
+### Task 4: Share permissions and access
+Find a another attendee and share access to your agent with them. You can do this by clicking on the `Access Control` button and adding the user to the list of users with permissions.
+Try different permission like `Reader`, `Contributor` and `Owner` and see how the access changes for the other user. Experiment between the 2 of you to get a sense of the granular permissions that can be assigned.
