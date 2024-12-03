@@ -21,3 +21,23 @@ Visit the Chat portal site and log in with the credentials that you were provide
 5- **Agent Dropdown**: This is where you can select the agent you want to interact with.  You can select from a list of agents that are available to you.
 
 6- **Send Button**: This is the button you will click to send your question to the agent.
+
+## Task 2: Chat with an Agent
+In this Task we will start a chat session with an agent in the chat portal.  Select an agent from the dropdown and type multiple questions, one by one.  Click the send button to send each question to the agent and observe the response.
+
+1- **Select Agent**: Click on the dropdown and select an agent from the list. You can select `Monica` for this task.
+
+2- **Type Question**: In the chat user prompt, type a question for the agent.  You can ask anything you like. Example: `Why is the sky blue?`  just to get a feel for the interaction.
+
+3- **Try the following prompts (questions)**: 
+
+### Code Interpreter with OpenAI Assistant
+
+- Write a Python function that reverses the string that was passed into it
+- Execute this code with the following input: "Hello, FoundationaLLM!!!"
+- Click on the `analysis` hyperlink to view the code that was executed in the sandbox/secure environment
+- Create a reverse.py file that contains the function code
+- Click on the `analysis`hyperlink to view the code that executed to generate the file, download and show the file.
+
+
+
