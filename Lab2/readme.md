@@ -39,5 +39,11 @@ In this Task we will start a chat session with an agent in the chat portal.  Sel
 - Create a reverse.py file that contains the function code
 - Click on the `analysis`hyperlink to view the code that executed to generate the file, download and show the file.
 
+### File Search Assistance
+
+- Upload the file `ed_thorp_beatthemarket.docx` which is the Ed Thorp beat the market book and ask using the prompt `show the size/num pages of the doc`
+- Follow that response with the prompt `Summarize this book?`
+- Finally, ask `What is a "call?"` this will demonstrates context awareness as `call` would typically be interpreted as a phone call
+
 
 
