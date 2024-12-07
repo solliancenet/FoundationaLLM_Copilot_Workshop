@@ -1,0 +1,882 @@
+{
+	"info": {
+		"_postman_id": "d62e9722-04f9-4ccd-86cb-0f1092af3543",
+		"name": "New York Workshop Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19626399"
+	},
+	"item": [
+		{
+			"name": "0_Vectorization_Profiles",
+			"item": [
+				{
+					"name": "Create vectorization text embedding profile - Gateway",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"text-embedding-profile\",\r\n    \"name\": \"text_embedding_profile_gateway\",\r\n    \"display_name\": null,\r\n    \"description\": null,\r\n    \"cost_center\": null,\r\n    \"text_embedding\": \"GatewayTextEmbedding\",\r\n    \"settings\": {\r\n        \"model_name\": \"text-embedding-ada-002\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/instances/{{instanceId}}/providers/FoundationaLLM.Vectorization/textEmbeddingProfiles/text_embedding_profile_gateway",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"instances",
+								"{{instanceId}}",
+								"providers",
+								"FoundationaLLM.Vectorization",
+								"textEmbeddingProfiles",
+								"text_embedding_profile_gateway"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"AzureOpenAI_Embedding\",\r\n    \"TextEmbedding\": \"SemanticKernelTextEmbedding\",\r\n    \"Settings\": {},\r\n    \"ConfigurationReferences\": {\r\n        \"APIKey\": \"FoundationaLLM:Vectorization:SemanticKernelTextEmbeddingService:APIKey\",\r\n        \"APIVersion\": \"FoundationaLLM:Vectorization:SemanticKernelTextEmbeddingService:APIVersion\",\r\n        \"AuthenticationType\": \"FoundationaLLM:Vectorization:SemanticKernelTextEmbeddingService:AuthenticationType\",\r\n        \"DeploymentName\": \"FoundationaLLM:Vectorization:SemanticKernelTextEmbeddingService:DeploymentName\",\r\n        \"Endpoint\": \"FoundationaLLM:Vectorization:SemanticKernelTextEmbeddingService:Endpoint\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/instances/{{instanceId}}/providers/FoundationaLLM.Vectorization/textembeddingprofiles/AzureOpenAI_Embedding",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"instances",
+										"{{instanceId}}",
+										"providers",
+										"FoundationaLLM.Vectorization",
+										"textembeddingprofiles",
+										"AzureOpenAI_Embedding"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "145"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Feb 2024 23:44:53 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "request-context",
+									"value": "appId=cid-v1:cb72f0fd-328a-4231-ab73-48a40f61e112"
+								},
+								{
+									"key": "api-supported-versions",
+									"value": "1.0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"objectId\": \"/instances/29ca44ca-a443-409c-9d8d-ec309b640a89/providers/FoundationaLLM.Vectorization/textembeddingprofiles/AzureOpenAI_Embedding\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create vectorization indexing profile - demo-vectorization",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"indexing-profile\",\r\n    \"name\": \"demo-vectorization\",\r\n    \"display_name\": null,\r\n    \"description\": null,\r\n    \"cost_center\": null,\r\n    \"indexer\": \"AzureAISearchIndexer\",\r\n    \"settings\": {\r\n        \"IndexName\": \"demo-vectorization\",\r\n        \"TopN\": \"5\",\r\n        \"Filters\": \"\",\r\n        \"EmbeddingFieldName\": \"Embedding\",\r\n        \"TextFieldName\": \"Text\",\r\n        \"api_endpoint_configuration_object_id\": \"/instances/{{instanceId}}/providers/FoundationaLLM.Configuration/apiEndpointConfigurations/AzureAISearch\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/instances/{{instanceId}}/providers/FoundationaLLM.Vectorization/indexingProfiles/demo-vectorization",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"instances",
+								"{{instanceId}}",
+								"providers",
+								"FoundationaLLM.Vectorization",
+								"indexingProfiles",
+								"demo-vectorization"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Indexer\": \"AzureAISearchIndexer\",\r\n    \"Name\": \"AzureAISearch_Default_002\",\r\n    \"Settings\": {\r\n        \"IndexName\": \"fllm-default-002\",\r\n        \"TopN\": \"3\",\r\n        \"Filters\": \"\",\r\n        \"EmbeddingFieldName\": \"Embedding\",\r\n        \"TextFieldName\": \"Text\"\r\n    },\r\n    \"ConfigurationReferences\": {\r\n        \"APIKey\": \"FoundationaLLM:Vectorization:AzureAISearchIndexingService:APIKey\",\r\n        \"QueryAPIKey\": \"FoundationaLLM:Vectorization:AzureAISearchIndexingService:QueryAPIKey\",\r\n        \"AuthenticationType\": \"FoundationaLLM:Vectorization:AzureAISearchIndexingService:AuthenticationType\",\r\n        \"Endpoint\": \"FoundationaLLM:Vectorization:AzureAISearchIndexingService:Endpoint\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/instances/{{instanceId}}/providers/FoundationaLLM.Vectorization/indexingprofiles/AzureAISearch_Default_002",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"instances",
+										"{{instanceId}}",
+										"providers",
+										"FoundationaLLM.Vectorization",
+										"indexingprofiles",
+										"AzureAISearch_Default_002"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "144"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Feb 2024 23:43:42 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "request-context",
+									"value": "appId=cid-v1:cb72f0fd-328a-4231-ab73-48a40f61e112"
+								},
+								{
+									"key": "api-supported-versions",
+									"value": "1.0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"objectId\": \"/instances/29ca44ca-a443-409c-9d8d-ec309b640a89/providers/FoundationaLLM.Vectorization/indexingprofiles/AzureAISearch_Default_002\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create vectorization text partitioning profile - default_token_text_partition",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"default_token_text_partition\",\r\n    \"text_splitter\": \"TokenTextSplitter\",\r\n    \"settings\": {\r\n        \"Tokenizer\": \"MicrosoftBPETokenizer\",\r\n        \"TokenizerEncoder\": \"cl100k_base\",\r\n        \"ChunkSizeTokens\": \"500\",\r\n        \"OverlapSizeTokens\": \"50\"\r\n    },\r\n    \"configuration_references\": {}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/instances/{{instanceId}}/providers/FoundationaLLM.Vectorization/textPartitioningProfiles/default_token_text_partition",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"instances",
+								"{{instanceId}}",
+								"providers",
+								"FoundationaLLM.Vectorization",
+								"textPartitioningProfiles",
+								"default_token_text_partition"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"DefaultTokenTextPartition_Small\",\r\n    \"TextSplitter\": \"TokenTextSplitter\",\r\n    \"Settings\": {\r\n        \"Tokenizer\": \"MicrosoftBPETokenizer\",\r\n        \"TokenizerEncoder\": \"cl100k_base\",\r\n        \"ChunkSizeTokens\": \"500\",\r\n        \"OverlapSizeTokens\": \"50\"\r\n    },\r\n    \"ConfigurationReferences\": {}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/instances/{{instanceId}}/providers/FoundationaLLM.Vectorization/textpartitioningprofiles/DefaultTokenTextPartition_Small",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"instances",
+										"{{instanceId}}",
+										"providers",
+										"FoundationaLLM.Vectorization",
+										"textpartitioningprofiles",
+										"DefaultTokenTextPartition_Small"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "158"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Feb 2024 23:51:31 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "request-context",
+									"value": "appId=cid-v1:cb72f0fd-328a-4231-ab73-48a40f61e112"
+								},
+								{
+									"key": "api-supported-versions",
+									"value": "1.0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"objectId\": \"/instances/29ca44ca-a443-409c-9d8d-ec309b640a89/providers/FoundationaLLM.Vectorization/textpartitioningprofiles/DefaultTokenTextPartition_Small\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "1_Datasources",
+			"item": [
+				{
+					"name": "App Configuration - FoundationaLLM:DataSources:demo-vectorization:AuthenticationType",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"appconfiguration-key-value\",\r\n    \"name\": \"FoundationaLLM:DataSources:demo-vectorization:AuthenticationType\",\r\n    \"display_name\": \"FoundationaLLM:DataSources:demo-vectorization:AuthenticationType\",\r\n    \"description\": null,\r\n    \"key\": \"FoundationaLLM:DataSources:demo-vectorization:AuthenticationType\",\r\n    \"value\": \"AzureIdentity\",\r\n    \"content_type\": \"text/plain\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/instances/{{instanceId}}/providers/FoundationaLLM.Configuration/appConfigurations/FoundationaLLM:DataSources:demo-vectorization:AuthenticationType",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"instances",
+								"{{instanceId}}",
+								"providers",
+								"FoundationaLLM.Configuration",
+								"appConfigurations",
+								"FoundationaLLM:DataSources:demo-vectorization:AuthenticationType"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"interest-rates\",\r\n    \"type\": \"knowledge-management\",\r\n    \"description\": \"Knowledge Management Agent that analyzes minimum interest rates.\",\r\n    \"language_model\": {\r\n        \"type\": \"openai\",\r\n        \"provider\": \"microsoft\",\r\n        \"temperature\": 0,\r\n        \"use_chat\": true,\r\n        \"api_endpoint\": \"FoundationaLLM:AzureOpenAI:API:Endpoint\",\r\n        \"api_key\": \"FoundationaLLM:AzureOpenAI:API:Key\",\r\n        \"api_version\": \"FoundationaLLM:AzureOpenAI:API:Version\",\r\n        \"version\": \"FoundationaLLM:AzureOpenAI:API:Completions:ModelVersion\",\r\n        \"deployment\": \"FoundationaLLM:AzureOpenAI:API:Completions:DeploymentName\"\r\n    },\r\n    \"indexing_profile\": \"/instances/1bc45134-6985-48b9-9466-c5f70ddaaa65/providers/FoundationaLLM.Vectorization/indexingprofiles/AzureAISearch_Default_001\",\r\n    \"embedding_profile\": \"/instances/1bc45134-6985-48b9-9466-c5f70ddaaa65/providers/FoundationaLLM.Vectorization/textembeddingprofiles/AzureOpenAI_Embedding\",\r\n    \"prompt\": \"/instances/1e22cd2a-7b81-4160-b79f-f6443e3a6ac2/providers/FoundationaLLM.Prompt/prompts/interest-rates-analyst\",\r\n    \"sessions_enabled\": true,\r\n    \"conversation_history\": {\r\n        \"enabled\": true,\r\n        \"max_history\": 5\r\n    },\r\n    \"gatekeeper\": {\r\n        \"use_system_setting\": false,\r\n        \"options\": []\r\n    },\r\n    \"orchestrator\": \"LangChain\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/instances/{{instanceId}}/providers/FoundationaLLM.Agent/agents/interest-rates",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"instances",
+										"{{instanceId}}",
+										"providers",
+										"FoundationaLLM.Agent",
+										"agents",
+										"interest-rates"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "115"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Feb 2024 23:35:48 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "request-context",
+									"value": "appId=cid-v1:cb72f0fd-328a-4231-ab73-48a40f61e112"
+								},
+								{
+									"key": "api-supported-versions",
+									"value": "1.0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"objectId\": \"/instances/29ca44ca-a443-409c-9d8d-ec309b640a89/providers/FoundationaLLM.Agent/agents/interest-rates\"\n}"
+						}
+					]
+				},
+				{
+					"name": "App Configuration - FoundationaLLM:DataSources:demo-vectorization:AccountName",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"appconfiguration-key-value\",\r\n    \"name\": \"FoundationaLLM:DataSources:demo-vectorization:AccountName\",\r\n    \"display_name\": \"FoundationaLLM:DataSources:demo-vectorization:AccountName\",\r\n    \"description\": null,\r\n    \"key\": \"FoundationaLLM:DataSources:demo-vectorization:AccountName\",\r\n    \"value\": \"{{storage_account_name}}\",\r\n    \"content_type\": \"text/plain\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/instances/{{instanceId}}/providers/FoundationaLLM.Configuration/appConfigurations/FoundationaLLM:DataSources:demo-vectorization:AccountName",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"instances",
+								"{{instanceId}}",
+								"providers",
+								"FoundationaLLM.Configuration",
+								"appConfigurations",
+								"FoundationaLLM:DataSources:demo-vectorization:AccountName"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"interest-rates\",\r\n    \"type\": \"knowledge-management\",\r\n    \"description\": \"Knowledge Management Agent that analyzes minimum interest rates.\",\r\n    \"language_model\": {\r\n        \"type\": \"openai\",\r\n        \"provider\": \"microsoft\",\r\n        \"temperature\": 0,\r\n        \"use_chat\": true,\r\n        \"api_endpoint\": \"FoundationaLLM:AzureOpenAI:API:Endpoint\",\r\n        \"api_key\": \"FoundationaLLM:AzureOpenAI:API:Key\",\r\n        \"api_version\": \"FoundationaLLM:AzureOpenAI:API:Version\",\r\n        \"version\": \"FoundationaLLM:AzureOpenAI:API:Completions:ModelVersion\",\r\n        \"deployment\": \"FoundationaLLM:AzureOpenAI:API:Completions:DeploymentName\"\r\n    },\r\n    \"indexing_profile\": \"/instances/1bc45134-6985-48b9-9466-c5f70ddaaa65/providers/FoundationaLLM.Vectorization/indexingprofiles/AzureAISearch_Default_001\",\r\n    \"embedding_profile\": \"/instances/1bc45134-6985-48b9-9466-c5f70ddaaa65/providers/FoundationaLLM.Vectorization/textembeddingprofiles/AzureOpenAI_Embedding\",\r\n    \"prompt\": \"/instances/1e22cd2a-7b81-4160-b79f-f6443e3a6ac2/providers/FoundationaLLM.Prompt/prompts/interest-rates-analyst\",\r\n    \"sessions_enabled\": true,\r\n    \"conversation_history\": {\r\n        \"enabled\": true,\r\n        \"max_history\": 5\r\n    },\r\n    \"gatekeeper\": {\r\n        \"use_system_setting\": false,\r\n        \"options\": []\r\n    },\r\n    \"orchestrator\": \"LangChain\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/instances/{{instanceId}}/providers/FoundationaLLM.Agent/agents/interest-rates",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"instances",
+										"{{instanceId}}",
+										"providers",
+										"FoundationaLLM.Agent",
+										"agents",
+										"interest-rates"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "115"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Feb 2024 23:35:48 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "request-context",
+									"value": "appId=cid-v1:cb72f0fd-328a-4231-ab73-48a40f61e112"
+								},
+								{
+									"key": "api-supported-versions",
+									"value": "1.0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"objectId\": \"/instances/29ca44ca-a443-409c-9d8d-ec309b640a89/providers/FoundationaLLM.Agent/agents/interest-rates\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create DataSource - demo-vectorization",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"azure-data-lake\",\r\n  \"name\": \"demo-vectorization\",\r\n  \"display_name\": null,\r\n  \"description\": null,\r\n  \"folders\": [\r\n    \"vectorization-input/demo-vectorization\"\r\n  ],\r\n  \"configuration_references\": {\r\n    \"AuthenticationType\": \"FoundationaLLM:DataSources:demo-vectorization:AuthenticationType\",\r\n    \"AccountName\": \"FoundationaLLM:DataSources:demo-vectorization:AccountName\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/instances/{{instanceId}}/providers/FoundationaLLM.DataSource/dataSources/demo-vectorization",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"instances",
+								"{{instanceId}}",
+								"providers",
+								"FoundationaLLM.DataSource",
+								"dataSources",
+								"demo-vectorization"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"interest-rates\",\r\n    \"type\": \"knowledge-management\",\r\n    \"description\": \"Knowledge Management Agent that analyzes minimum interest rates.\",\r\n    \"language_model\": {\r\n        \"type\": \"openai\",\r\n        \"provider\": \"microsoft\",\r\n        \"temperature\": 0,\r\n        \"use_chat\": true,\r\n        \"api_endpoint\": \"FoundationaLLM:AzureOpenAI:API:Endpoint\",\r\n        \"api_key\": \"FoundationaLLM:AzureOpenAI:API:Key\",\r\n        \"api_version\": \"FoundationaLLM:AzureOpenAI:API:Version\",\r\n        \"version\": \"FoundationaLLM:AzureOpenAI:API:Completions:ModelVersion\",\r\n        \"deployment\": \"FoundationaLLM:AzureOpenAI:API:Completions:DeploymentName\"\r\n    },\r\n    \"indexing_profile\": \"/instances/1bc45134-6985-48b9-9466-c5f70ddaaa65/providers/FoundationaLLM.Vectorization/indexingprofiles/AzureAISearch_Default_001\",\r\n    \"embedding_profile\": \"/instances/1bc45134-6985-48b9-9466-c5f70ddaaa65/providers/FoundationaLLM.Vectorization/textembeddingprofiles/AzureOpenAI_Embedding\",\r\n    \"prompt\": \"/instances/1e22cd2a-7b81-4160-b79f-f6443e3a6ac2/providers/FoundationaLLM.Prompt/prompts/interest-rates-analyst\",\r\n    \"sessions_enabled\": true,\r\n    \"conversation_history\": {\r\n        \"enabled\": true,\r\n        \"max_history\": 5\r\n    },\r\n    \"gatekeeper\": {\r\n        \"use_system_setting\": false,\r\n        \"options\": []\r\n    },\r\n    \"orchestrator\": \"LangChain\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/instances/{{instanceId}}/providers/FoundationaLLM.Agent/agents/interest-rates",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"instances",
+										"{{instanceId}}",
+										"providers",
+										"FoundationaLLM.Agent",
+										"agents",
+										"interest-rates"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "115"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "date",
+									"value": "Thu, 08 Feb 2024 23:35:48 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "request-context",
+									"value": "appId=cid-v1:cb72f0fd-328a-4231-ab73-48a40f61e112"
+								},
+								{
+									"key": "api-supported-versions",
+									"value": "1.0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"objectId\": \"/instances/29ca44ca-a443-409c-9d8d-ec309b640a89/providers/FoundationaLLM.Agent/agents/interest-rates\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "2_Vectorization_Pipelines",
+			"item": [
+				{
+					"name": "Create Vectorization Pipeline - vectorization-demo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"vectorization-pipeline\",\r\n    \"name\": \"demo-vectorization\",\r\n    \"display_name\": null,\r\n    \"description\": \"Vectorization data pipeline dedicated to the demo-vectorization agent.\",\r\n    \"active\": false,\r\n    \"data_source_object_id\": \"/instances/{{instanceId}}/providers/FoundationaLLM.DataSource/dataSources/demo-vectorization\",\r\n    \"text_partitioning_profile_object_id\": \"/instances/{{instanceId}}/providers/FoundationaLLM.Vectorization/textPartitioningProfiles/default_token_text_partition\",\r\n    \"text_embedding_profile_object_id\": \"/instances/{{instanceId}}/providers/FoundationaLLM.Vectorization/textEmbeddingProfiles/text_embedding_profile_gateway\",\r\n    \"indexing_profile_object_id\": \"/instances/{{instanceId}}/providers/FoundationaLLM.Vectorization/indexingProfiles/demo-vectorization\",\r\n    \"trigger_type\": \"Manual\",\r\n    \"trigger_cron_schedule\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/instances/{{instanceId}}/providers/FoundationaLLM.Vectorization/vectorizationPipelines/demo-vectorization",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"instances",
+								"{{instanceId}}",
+								"providers",
+								"FoundationaLLM.Vectorization",
+								"vectorizationPipelines",
+								"demo-vectorization"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/instances/{{instanceId}}/providers/FoundationaLLM.Agent/agents?api-version=2024-02-16",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"instances",
+										"{{instanceId}}",
+										"providers",
+										"FoundationaLLM.Agent",
+										"agents"
+									],
+									"query": [
+										{
+											"key": "api-version",
+											"value": "2024-02-16"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 20 Feb 2024 15:58:13 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "api-supported-versions",
+									"value": "2024-02-16"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"type\": \"knowledge-management\",\n        \"name\": \"interest-rates2\",\n        \"object_id\": \"/instances/1e22cd2a-7b81-4160-b79f-f6443e3a6ac2/providers/FoundationaLLM.Agent/agents/interest-rates2\",\n        \"description\": \"Knowledge Management Agent that analyzes minimum interest rates.\",\n        \"indexing_profile_object_id\": null,\n        \"text_embedding_profile_object_id\": null,\n        \"text_partitioning_profile_object_id\": null,\n        \"language_model\": {\n            \"type\": \"openai\",\n            \"provider\": \"microsoft\",\n            \"temperature\": 0,\n            \"use_chat\": true,\n            \"api_endpoint\": \"FoundationaLLM:AzureOpenAI:API:Endpoint\",\n            \"api_key\": \"FoundationaLLM:AzureOpenAI:API:Key\",\n            \"api_version\": \"FoundationaLLM:AzureOpenAI:API:Version\",\n            \"version\": \"FoundationaLLM:AzureOpenAI:API:Completions:ModelVersion\",\n            \"deployment\": \"FoundationaLLM:AzureOpenAI:API:Completions:DeploymentName\"\n        },\n        \"sessions_enabled\": true,\n        \"conversation_history\": {\n            \"enabled\": true,\n            \"max_history\": 5\n        },\n        \"gatekeeper\": {\n            \"use_system_setting\": false,\n            \"options\": []\n        },\n        \"orchestrator\": \"LangChain\",\n        \"prompt_object_id\": null\n    },\n    {\n        \"type\": \"knowledge-management\",\n        \"name\": \"sotu-2023\",\n        \"object_id\": \"/instances/1bc45134-6985-48b9-9466-c5f70ddaaa65/providers/FoundationaLLM.Agent/agents/sotu-2023\",\n        \"description\": \"Knowledge Management Agent that queries the State of the Union speech transcript\",\n        \"indexing_profile_object_id\": null,\n        \"text_embedding_profile_object_id\": null,\n        \"text_partitioning_profile_object_id\": null,\n        \"language_model\": {\n            \"type\": \"openai\",\n            \"provider\": \"microsoft\",\n            \"temperature\": 0,\n            \"use_chat\": true,\n            \"api_endpoint\": \"FoundationaLLM:AzureOpenAI:API:Endpoint\",\n            \"api_key\": \"FoundationaLLM:AzureOpenAI:API:Key\",\n            \"api_version\": \"FoundationaLLM:AzureOpenAI:API:Version\",\n            \"version\": \"FoundationaLLM:AzureOpenAI:API:Completions:ModelVersion\",\n            \"deployment\": \"FoundationaLLM:AzureOpenAI:API:Completions:DeploymentName\"\n        },\n        \"sessions_enabled\": true,\n        \"conversation_history\": {\n            \"enabled\": true,\n            \"max_history\": 5\n        },\n        \"gatekeeper\": {\n            \"use_system_setting\": false,\n            \"options\": [\n                \"ContentSafety\",\n                \"Presidio\"\n            ]\n        },\n        \"orchestrator\": \"LangChain\",\n        \"prompt_object_id\": null\n    },\n    {\n        \"type\": \"knowledge-management\",\n        \"name\": \"jdh-agent-v2\",\n        \"object_id\": \"/instances/1e22cd2a-7b81-4160-b79f-f6443e3a6ac2/providers/FoundationaLLM.Agent/agents/jdh-agent-v2\",\n        \"description\": \"Test agent with full options.\",\n        \"indexing_profile_object_id\": \"/instances/1bc45134-6985-48b9-9466-c5f70ddaaa65/providers/FoundationaLLM.Vectorization/indexingprofiles/AzureAISearch_Test_001\",\n        \"text_embedding_profile_object_id\": \"/instances/1e22cd2a-7b81-4160-b79f-f6443e3a6ac2/providers/FoundationaLLM.Vectorization/contentsourceprofiles/SDZWAJournals3\",\n        \"text_partitioning_profile_object_id\": \"/instances/1e22cd2a-7b81-4160-b79f-f6443e3a6ac2/providers/FoundationaLLM.Vectorization/textpartitioningprofiles/jdh-agent-v2\",\n        \"language_model\": {\n            \"type\": \"openai\",\n            \"provider\": \"microsoft\",\n            \"temperature\": 0,\n            \"use_chat\": true,\n            \"api_endpoint\": \"FoundationaLLM:AzureOpenAI:API:Endpoint\",\n            \"api_key\": \"FoundationaLLM:AzureOpenAI:API:Key\",\n            \"api_version\": \"FoundationaLLM:AzureOpenAI:API:Version\",\n            \"version\": \"FoundationaLLM:AzureOpenAI:API:Completions:ModelVersion\",\n            \"deployment\": \"FoundationaLLM:AzureOpenAI:API:Completions:DeploymentName\"\n        },\n        \"sessions_enabled\": true,\n        \"conversation_history\": {\n            \"enabled\": false,\n            \"max_history\": 5\n        },\n        \"gatekeeper\": {\n            \"use_system_setting\": true,\n            \"options\": [\n                \"ContentSafety\",\n                \"Presidio\"\n            ]\n        },\n        \"orchestrator\": \"LangChain\",\n        \"prompt_object_id\": \"/instances/1e22cd2a-7b81-4160-b79f-f6443e3a6ac2/providers/FoundationaLLM.Prompt/prompts/jdh-agent-v2\"\n    },\n    {\n        \"type\": \"knowledge-management\",\n        \"name\": \"default-test\",\n        \"object_id\": \"/instances/1e22cd2a-7b81-4160-b79f-f6443e3a6ac2/providers/FoundationaLLM.Agent/agents/default-test\",\n        \"description\": \"This is a test default agent.\",\n        \"indexing_profile_object_id\": null,\n        \"text_embedding_profile_object_id\": null,\n        \"text_partitioning_profile_object_id\": null,\n        \"language_model\": {\n            \"type\": \"openai\",\n            \"provider\": \"microsoft\",\n            \"temperature\": 0,\n            \"use_chat\": true,\n            \"api_endpoint\": \"FoundationaLLM:AzureOpenAI:API:Endpoint\",\n            \"api_key\": \"FoundationaLLM:AzureOpenAI:API:Key\",\n            \"api_version\": \"FoundationaLLM:AzureOpenAI:API:Version\",\n            \"version\": \"FoundationaLLM:AzureOpenAI:API:Completions:ModelVersion\",\n            \"deployment\": \"FoundationaLLM:AzureOpenAI:API:Completions:DeploymentName\"\n        },\n        \"sessions_enabled\": false,\n        \"conversation_history\": {\n            \"enabled\": false,\n            \"max_history\": 5\n        },\n        \"gatekeeper\": {\n            \"use_system_setting\": false,\n            \"options\": []\n        },\n        \"orchestrator\": \"LangChain\",\n        \"prompt_object_id\": null\n    },\n    {\n        \"type\": \"knowledge-management\",\n        \"name\": \"FLLMDocumentation\",\n        \"object_id\": \"/instances/1e22cd2a-7b81-4160-b79f-f6443e3a6ac2/providers/FoundationaLLM.Agent/agents/FLLMDocumentation\",\n        \"description\": \"FLLM Documentation Agent\",\n        \"indexing_profile_object_id\": null,\n        \"text_embedding_profile_object_id\": null,\n        \"text_partitioning_profile_object_id\": null,\n        \"language_model\": {\n            \"type\": \"openai\",\n            \"provider\": \"microsoft\",\n            \"temperature\": 0,\n            \"use_chat\": true,\n            \"api_endpoint\": \"FoundationaLLM:AzureOpenAI:API:Endpoint\",\n            \"api_key\": \"FoundationaLLM:AzureOpenAI:API:Key\",\n            \"api_version\": \"FoundationaLLM:AzureOpenAI:API:Version\",\n            \"version\": \"FoundationaLLM:AzureOpenAI:API:Completions:ModelVersion\",\n            \"deployment\": \"FoundationaLLM:AzureOpenAI:API:Completions:DeploymentName\"\n        },\n        \"sessions_enabled\": true,\n        \"conversation_history\": {\n            \"enabled\": true,\n            \"max_history\": 5\n        },\n        \"gatekeeper\": {\n            \"use_system_setting\": false,\n            \"options\": [\n                \"ContentSafety\",\n                \"Presidio\"\n            ]\n        },\n        \"orchestrator\": \"LangChain\",\n        \"prompt_object_id\": null\n    },\n    {\n        \"type\": \"knowledge-management\",\n        \"name\": \"sotu3\",\n        \"object_id\": \"/instances/1bc45134-6985-48b9-9466-c5f70ddaaa65/providers/FoundationaLLM.Agent/agents/sotu3\",\n        \"description\": \"Knowledge Management Agent that queries the State of the Union speech transcript.\",\n        \"indexing_profile_object_id\": null,\n        \"text_embedding_profile_object_id\": null,\n        \"text_partitioning_profile_object_id\": null,\n        \"language_model\": {\n            \"type\": \"openai\",\n            \"provider\": \"microsoft\",\n            \"temperature\": 0,\n            \"use_chat\": true,\n            \"api_endpoint\": \"FoundationaLLM:AzureOpenAI:API:Endpoint\",\n            \"api_key\": \"FoundationaLLM:AzureOpenAI:API:Key\",\n            \"api_version\": \"FoundationaLLM:AzureOpenAI:API:Version\",\n            \"version\": \"FoundationaLLM:AzureOpenAI:API:Completions:ModelVersion\",\n            \"deployment\": \"FoundationaLLM:AzureOpenAI:API:Completions:DeploymentName\"\n        },\n        \"sessions_enabled\": true,\n        \"conversation_history\": {\n            \"enabled\": true,\n            \"max_history\": 5\n        },\n        \"gatekeeper\": {\n            \"use_system_setting\": false,\n            \"options\": [\n                \"ContentSafety\",\n                \"Presidio\"\n            ]\n        },\n        \"orchestrator\": \"LangChain\",\n        \"prompt_object_id\": null\n    },\n    {\n        \"type\": \"knowledge-management\",\n        \"name\": \"sotu2\",\n        \"object_id\": \"/instances/1bc45134-6985-48b9-9466-c5f70ddaaa65/providers/FoundationaLLM.Agent/agents/sotu2\",\n        \"description\": \"Knowledge Management Agent that queries the State of the Union speech transcript\",\n        \"indexing_profile_object_id\": null,\n        \"text_embedding_profile_object_id\": null,\n        \"text_partitioning_profile_object_id\": null,\n        \"language_model\": {\n            \"type\": \"openai\",\n            \"provider\": \"microsoft\",\n            \"temperature\": 0,\n            \"use_chat\": true,\n            \"api_endpoint\": \"FoundationaLLM:AzureOpenAI:API:Endpoint\",\n            \"api_key\": \"FoundationaLLM:AzureOpenAI:API:Key\",\n            \"api_version\": \"FoundationaLLM:AzureOpenAI:API:Version\",\n            \"version\": \"FoundationaLLM:AzureOpenAI:API:Completions:ModelVersion\",\n            \"deployment\": \"FoundationaLLM:AzureOpenAI:API:Completions:DeploymentName\"\n        },\n        \"sessions_enabled\": true,\n        \"conversation_history\": {\n            \"enabled\": true,\n            \"max_history\": 5\n        },\n        \"gatekeeper\": {\n            \"use_system_setting\": false,\n            \"options\": [\n                \"ContentSafety\",\n                \"Presidio\"\n            ]\n        },\n        \"orchestrator\": \"LangChain\",\n        \"prompt_object_id\": null\n    },\n    {\n        \"type\": \"knowledge-management\",\n        \"name\": \"sotu\",\n        \"object_id\": \"/instances/1bc45134-6985-48b9-9466-c5f70ddaaa65/providers/FoundationaLLM.Agent/agents/sotu\",\n        \"description\": \"Knowledge Management Agent that queries the State of the Union speech transcript\",\n        \"indexing_profile_object_id\": \"/instances/11111111-1111-1111-1111-111111111111/providers/FoundationaLLM.Vectorization/indexingprofiles/sotu-index\",\n        \"text_embedding_profile_object_id\": \"/instances/11111111-1111-1111-1111-111111111111/providers/FoundationaLLM.Vectorization/textembeddingprofiles/AzureOpenAI_Embedding\",\n        \"text_partitioning_profile_object_id\": null,\n        \"language_model\": {\n            \"type\": \"openai\",\n            \"provider\": \"microsoft\",\n            \"temperature\": 0,\n            \"use_chat\": true,\n            \"api_endpoint\": \"FoundationaLLM:AzureOpenAI:API:Endpoint\",\n            \"api_key\": \"FoundationaLLM:AzureOpenAI:API:Key\",\n            \"api_version\": \"FoundationaLLM:AzureOpenAI:API:Version\",\n            \"version\": \"FoundationaLLM:AzureOpenAI:API:Completions:ModelVersion\",\n            \"deployment\": \"FoundationaLLM:AzureOpenAI:API:Completions:DeploymentName\"\n        },\n        \"sessions_enabled\": true,\n        \"conversation_history\": {\n            \"enabled\": true,\n            \"max_history\": 5\n        },\n        \"gatekeeper\": {\n            \"use_system_setting\": false,\n            \"options\": [\n                \"ContentSafety\",\n                \"Presidio\"\n            ]\n        },\n        \"orchestrator\": \"LangChain\",\n        \"prompt_object_id\": \"/instances/11111111-1111-1111-1111-111111111111/providers/FoundationaLLM.Prompt/prompts/sotu\"\n    },\n    {\n        \"type\": \"knowledge-management\",\n        \"name\": \"sotu-2023-v2\",\n        \"object_id\": \"/instances/1bc45134-6985-48b9-9466-c5f70ddaaa65/providers/FoundationaLLM.Agent/agents/sotu-2023-v2\",\n        \"description\": \"Knowledge Management Agent that queries the State of the Union speech transcript.\",\n        \"indexing_profile_object_id\": null,\n        \"text_embedding_profile_object_id\": null,\n        \"text_partitioning_profile_object_id\": null,\n        \"language_model\": {\n            \"type\": \"openai\",\n            \"provider\": \"microsoft\",\n            \"temperature\": 0,\n            \"use_chat\": true,\n            \"api_endpoint\": \"FoundationaLLM:AzureOpenAI:API:Endpoint\",\n            \"api_key\": \"FoundationaLLM:AzureOpenAI:API:Key\",\n            \"api_version\": \"FoundationaLLM:AzureOpenAI:API:Version\",\n            \"version\": \"FoundationaLLM:AzureOpenAI:API:Completions:ModelVersion\",\n            \"deployment\": \"FoundationaLLM:AzureOpenAI:API:Completions:DeploymentName\"\n        },\n        \"sessions_enabled\": true,\n        \"conversation_history\": {\n            \"enabled\": true,\n            \"max_history\": 5\n        },\n        \"gatekeeper\": {\n            \"use_system_setting\": false,\n            \"options\": [\n                \"ContentSafety\",\n                \"Presidio\"\n            ]\n        },\n        \"orchestrator\": \"LangChain\",\n        \"prompt_object_id\": null\n    },\n    {\n        \"type\": \"knowledge-management\",\n        \"name\": \"jdh-agent\",\n        \"object_id\": \"/instances/1e22cd2a-7b81-4160-b79f-f6443e3a6ac2/providers/FoundationaLLM.Agent/agents/jdh-agent\",\n        \"description\": \"This is a test agent for Joel.\",\n        \"indexing_profile_object_id\": null,\n        \"text_embedding_profile_object_id\": null,\n        \"text_partitioning_profile_object_id\": null,\n        \"language_model\": {\n            \"type\": \"openai\",\n            \"provider\": \"microsoft\",\n            \"temperature\": 0,\n            \"use_chat\": true,\n            \"api_endpoint\": \"FoundationaLLM:AzureOpenAI:API:Endpoint\",\n            \"api_key\": \"FoundationaLLM:AzureOpenAI:API:Key\",\n            \"api_version\": \"FoundationaLLM:AzureOpenAI:API:Version\",\n            \"version\": \"FoundationaLLM:AzureOpenAI:API:Completions:ModelVersion\",\n            \"deployment\": \"FoundationaLLM:AzureOpenAI:API:Completions:DeploymentName\"\n        },\n        \"sessions_enabled\": false,\n        \"conversation_history\": {\n            \"enabled\": true,\n            \"max_history\": 5\n        },\n        \"gatekeeper\": {\n            \"use_system_setting\": true,\n            \"options\": [\n                \"ContentSafety\",\n                \"Presidio\"\n            ]\n        },\n        \"orchestrator\": \"LangChain\",\n        \"prompt_object_id\": null\n    },\n    {\n        \"type\": \"knowledge-management\",\n        \"name\": \"interest-rates\",\n        \"object_id\": \"/instances/1e22cd2a-7b81-4160-b79f-f6443e3a6ac2/providers/FoundationaLLM.Agent/agents/interest-rates\",\n        \"description\": \"Knowledge Management Agent that analyzes minimum interest rates.\",\n        \"indexing_profile_object_id\": \"/instances/1bc45134-6985-48b9-9466-c5f70ddaaa65/providers/FoundationaLLM.Vectorization/indexingprofiles/AzureAISearch_Default_001\",\n        \"text_embedding_profile_object_id\": \"/instances/1bc45134-6985-48b9-9466-c5f70ddaaa65/providers/FoundationaLLM.Vectorization/textembeddingprofiles/AzureOpenAI_Embedding\",\n        \"text_partitioning_profile_object_id\": null,\n        \"language_model\": {\n            \"type\": \"openai\",\n            \"provider\": \"microsoft\",\n            \"temperature\": 0,\n            \"use_chat\": true,\n            \"api_endpoint\": \"FoundationaLLM:AzureOpenAI:API:Endpoint\",\n            \"api_key\": \"FoundationaLLM:AzureOpenAI:API:Key\",\n            \"api_version\": \"FoundationaLLM:AzureOpenAI:API:Version\",\n            \"version\": \"FoundationaLLM:AzureOpenAI:API:Completions:ModelVersion\",\n            \"deployment\": \"FoundationaLLM:AzureOpenAI:API:Completions:DeploymentName\"\n        },\n        \"sessions_enabled\": true,\n        \"conversation_history\": {\n            \"enabled\": true,\n            \"max_history\": 5\n        },\n        \"gatekeeper\": {\n            \"use_system_setting\": false,\n            \"options\": []\n        },\n        \"orchestrator\": \"LangChain\",\n        \"prompt_object_id\": \"/instances/1e22cd2a-7b81-4160-b79f-f6443e3a6ac2/providers/FoundationaLLM.Prompt/prompts/interest-rates-analyst\"\n    },\n    {\n        \"type\": \"internal-context\",\n        \"name\": \"internal-context\",\n        \"object_id\": \"/instances/1e22cd2a-7b81-4160-b79f-f6443e3a6ac2/providers/FoundationaLLM.Agent/agents/internal-context\",\n        \"description\": \"Internal context agent that passes the user's prompt directly to the LLM.\",\n        \"language_model\": {\n            \"type\": \"openai\",\n            \"provider\": \"microsoft\",\n            \"temperature\": 0,\n            \"use_chat\": true,\n            \"api_endpoint\": \"FoundationaLLM:AzureOpenAI:API:Endpoint\",\n            \"api_key\": \"FoundationaLLM:AzureOpenAI:API:Key\",\n            \"api_version\": \"FoundationaLLM:AzureOpenAI:API:Version\",\n            \"version\": \"FoundationaLLM:AzureOpenAI:API:Completions:ModelVersion\",\n            \"deployment\": \"FoundationaLLM:AzureOpenAI:API:Completions:DeploymentName\"\n        },\n        \"sessions_enabled\": true,\n        \"conversation_history\": {\n            \"enabled\": false,\n            \"max_history\": 5\n        },\n        \"gatekeeper\": {\n            \"use_system_setting\": false,\n            \"options\": []\n        },\n        \"orchestrator\": \"LangChain\",\n        \"prompt_object_id\": null\n    },\n    {\n        \"type\": \"internal-context\",\n        \"name\": \"internal-context-2\",\n        \"object_id\": \"/instances/1e22cd2a-7b81-4160-b79f-f6443e3a6ac2/providers/FoundationaLLM.Agent/agents/internal-context-2\",\n        \"description\": \"Testing mgmt api creation of internal context agent.\",\n        \"language_model\": {\n            \"type\": \"openai\",\n            \"provider\": \"microsoft\",\n            \"temperature\": 0,\n            \"use_chat\": true,\n            \"api_endpoint\": \"FoundationaLLM:AzureOpenAI:API:Endpoint\",\n            \"api_key\": \"FoundationaLLM:AzureOpenAI:API:Key\",\n            \"api_version\": \"FoundationaLLM:AzureOpenAI:API:Version\",\n            \"version\": \"FoundationaLLM:AzureOpenAI:API:Completions:ModelVersion\",\n            \"deployment\": \"FoundationaLLM:AzureOpenAI:API:Completions:DeploymentName\"\n        },\n        \"sessions_enabled\": true,\n        \"conversation_history\": {\n            \"enabled\": true,\n            \"max_history\": 5\n        },\n        \"gatekeeper\": {\n            \"use_system_setting\": false,\n            \"options\": [\n                \"ContentSafety\",\n                \"Presidio\"\n            ]\n        },\n        \"orchestrator\": \"LangChain\",\n        \"prompt_object_id\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Activate pipeline",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/instances/{{instanceId}}/providers/FoundationaLLM.Vectorization/vectorizationPipelines/demo-vectorization/activate",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"instances",
+								"{{instanceId}}",
+								"providers",
+								"FoundationaLLM.Vectorization",
+								"vectorizationPipelines",
+								"demo-vectorization",
+								"activate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Management API status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/instances/{{instanceId}}/status",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"instances",
+						"{{instanceId}}",
+						"status"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/status",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"status"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-length",
+							"value": "23"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "date",
+							"value": "Thu, 08 Feb 2024 23:34:44 GMT"
+						},
+						{
+							"key": "server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "request-context",
+							"value": "appId=cid-v1:cb72f0fd-328a-4231-ab73-48a40f61e112"
+						},
+						{
+							"key": "api-supported-versions",
+							"value": "1.0"
+						},
+						{
+							"key": "set-cookie",
+							"value": "acaAffinity=\"1d1da381c16b1b28\"; HttpOnly; SameSite=Strict; Secure;"
+						}
+					],
+					"cookie": [],
+					"body": "\"ManagementAPI - ready\""
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "scope",
+				"value": "{{management_portal_scope}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{management_portal_client_id}}",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://login.microsoftonline.com/{{entra_id_tenant_id}}/oauth2/token",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "https://login.microsoftonline.com/{{entra_id_tenant_id}}/oauth2/v2.0/authorize",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "FLLM Management Token",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "body",
+				"type": "string"
+			},
+			{
+				"key": "useBrowser",
+				"value": true,
+				"type": "boolean"
+			},
+			{
+				"key": "redirect_uri",
+				"value": "https://oauth.pstmn.io/v1/callback",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "authorization_code_with_pkce",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://localhost:63267"
+		},
+		{
+			"key": "instanceId",
+			"value": "6fa496ce-d5c0-4e02-9223-06a98c9c0176",
+			"type": "string"
+		},
+		{
+			"key": "management_portal_client_id",
+			"value": "c46a6d7d-4b31-4367-a291-fc8ac7789145",
+			"type": "string"
+		},
+		{
+			"key": "entra_id_tenant_id",
+			"value": "d280491c-b27a-41bf-9623-21b60cf430b3",
+			"type": "string"
+		},
+		{
+			"key": "management_portal_scope",
+			"value": "api://FoundationaLLM-Management/Data.Manage",
+			"type": "string"
+		},
+		{
+			"key": "storage_account_name",
+			"value": "stf5qx2nlzllpdi",
+			"type": "string"
+		}
+	]
+}
