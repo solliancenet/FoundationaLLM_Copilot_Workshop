@@ -1,6 +1,9 @@
 ## Lab2 - Chat Portal Discovery and capabilities
 In this lab, we will explore the Chat Portal and its capabilities. We will also look at each part of the User Interface and understand the different sections and features.
 
+> [!NOTE]
+> To start this lab, the presenter will go through a demonstration of the Chat Portal and its capabilities. The attendees will then be asked to perform all the tasks in the lab guide.
+
 ![Chat Portal](/media/Lab2-1.jpg)
 
 ### Task 1: Chat Portal Discovery
@@ -44,6 +47,35 @@ In this Task we will start a chat session with an agent in the chat portal.  Sel
 - Upload the file `ed_thorp_beatthemarket.docx` which is the Ed Thorp beat the market book and ask using the prompt `show the size/num pages of the doc`
 - Follow that response with the prompt `Summarize this book?`
 - Finally, ask `What is a "call?"` this will demonstrates context awareness as `call` would typically be interpreted as a phone call
+
+### Generation of Graphs - Plotting
+
+- **Prompt:** Show me a graph that contains all these functions: 2*sqrt(-abs(abs(x)-1)abs(3-abs(x))/((abs(x)-1)(3-abs(x))))(1+abs(abs(x)-3)/(abs(x)-3))sqrt(1-(x/7)^2)+(5+0.97(abs(x-.5)+abs(x+.5))-3(abs(x-.75)+abs(x+.75)))(1+abs(1-abs(x))/(1-abs(x))),-3sqrt(1-(x/7)^2)sqrt(abs(abs(x)-4)/(abs(x)-4)),abs(x/2)-0.0913722(x^2)-3+sqrt(1-(abs(abs(x)-2)-1)^2),(2.71052+(1.5-.5abs(x))-1.35526sqrt(4-(abs(x)-1)^2))sqrt(abs(abs(x)-1)/(abs(x)-1))+0.9
+- Notice the formation of the Batman logo in the graph that is generated
+- Show the analysis of the code generated to create the graph
+
+### Generating 3D Charts - Mutiplot
+
+- **Prompt:** Generate a 3D plot of the following formulas: (01) xy^3-yx^3 (02) (x^2+3y^2)e^(-x^2-y^2) (03) -xye^(-x^2-y^2)
+
+### Analysis of data in a chart for Wealth Management
+
+- Upload the image `quote-chart.jpg` in the data folder and ask the following prompts: Explain this image to someone who is new to reading charts.
+
+### Analysis of financial data using an Excel Spreadsheet
+
+- Upload the file `Sample_10k_Income.xlsx` from the data folder and ask the following prompt:
+- **Prompt:** Create a bar chart comparing the `total interest income` versus the `salaries and other personnel expense` by year
+
+## Task3: Branding
+
+In this task, we will explore the branding capabilities of the Chat Portal.  We will change the logo and the color scheme of the Chat Portal.
+
+Every possible `Branding` customization is available in the documentation at [Branding Customization](https://docs.foundationallm.ai/setup-guides/branding/branding-management-portal.html) for you to experiment with.
+
+> [!NOTE]
+> We recommend that you experiement with the branding capabilities in the Chat Portal to get a feel for the customization that is available to you but reset it after you are done as the portal is shared with other attendees.
+
 
 
 
