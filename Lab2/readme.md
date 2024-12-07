@@ -62,6 +62,8 @@ In this Task we will start a chat session with an agent in the chat portal.  Sel
 
 - Upload the image `quote-chart.jpg` in the data folder and ask the following prompts: Explain this image to someone who is new to reading charts.
 
+![Quote Chart](/data/quote-chart.jpg)
+
 ### Analysis of financial data using an Excel Spreadsheet
 
 - Upload the file `Sample_10k_Income.xlsx` from the data folder and ask the following prompt:
