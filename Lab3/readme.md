@@ -23,3 +23,35 @@ it can be used to generate contract templates and specific contracts with detail
 - For the `Conversation History` **enable** the conversation history and set the maximum Message to 10. This will allow the user to include the last 10 messages in the prompt in the chat portal.
 
 ![Conversation History](media/Lab3-4.jpg)
+
+- Keep the Gatekeeper disabled for now. This will be used in a later lab.
+
+![Gatekeeper](media/Lab3-5.jpg)
+
+- **Choose your orhestrator:** Select the orchestrator that you want to use for this agent. You can choose between `Langchain`, `Semantic Kernel`, `AzureOpenAIDirect` and `AzureAIDirect`. For this lab, we will choose `LangChain`.
+
+![Orchestrator](media/Lab3-6.jpg)
+
+- **Choose your AI Model:** Select the LLM Model you would like to use for this agent. Several LLM Model have already been deployed for the workshop, for the purpose of this Lab use `GPT-4o` based model to conintue.
+
+![AI Model](media/Lab3-7.jpg)
+
+- **Add the `OpenAI Assistant` capability**: Enable the OpenAI Assistant capability for this agent. This will allow the agent to generate responses based on the OpenAI Assistant model.
+
+![OpenAI Assistant](media/Lab3-8.jpg)
+
+- **Create an optionalcost center:** This is optional and can be used to track the cost of the agent. You can create a new cost center and call it `New York Workshop`. 
+
+![Cost Center](media/Lab3-9.jpg)
+
+- **Set an expiration date for the Agent:** This is optional and can be used to set an expiration date for the agent. You can set the expiration date to `March 31st 2025`.
+
+![Expiration Date](media/Lab3-10.jpg)
+
+5- **System Prompt**: 
+
+- **Set the System Prompt for the agent:** Give yoru agent a personality by setting the system prompt. This is the prompt that will be used to generate responses from the LLM. You can set the system prompt to `You are a professional and accurate agent that responds to questions with knowledge and respect.`.
+
+![System Prompt](media/Lab3-11.jpg)
+
+- **Click on `Create Agent`** to create the new agent.
