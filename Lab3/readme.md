@@ -55,3 +55,32 @@ it can be used to generate contract templates and specific contracts with detail
 ![System Prompt](/media/Lab3-11.jpg)
 
 - **Click on `Create Agent`** to create the new agent.
+
+### Task 2: Use the New Agent in the Chat Portal
+
+1- **Navigate to the Chat Portal**: Log in with the credentials that you were provided. Once logged in, head over to the top right dropdown and choose the newly created agent you just created.
+
+![Choose Agent](/media/Lab3-12.jpg)
+
+2- **Start a conversation with the Agent**: In the chat user prompt, type a question for the agent that would require the use of the OpenAI Assistant capability. You can ask a question like `Generate a template document that I can use to help with Merger and acquisitions, be detailed and accurate`.
+
+3- **Observe the response**: The agent should respond with a generated contract template that you can use for Merger and acquisitions. The response should be detailed and accurate based on the GPT-4o model and contains placeholders as we asked for a template.
+
+![Agent Response](/media/Lab3-13.jpg)
+
+4- **Continue the conversation**: You can continue the conversation with the agent by asking more questions or providing more details for the contract template. For this lab, you can ask the agent to generate a specific contract with details for a hypothetical merger and acquisition scenario. using the template just generated.
+
+**Prompt:** `Use this template to create a legal document for a company called Contoso Corporation with the main location at 11 Times Square New York, NY 10036`
+
+5- **Observe the response**: The agent should respond with a specific contract document for the company `Contoso Corporation` based on the template that was generated. The response should be detailed and accurate based on the GPT-4o model and contains the details you provided including the address. 
+
+![Agent Response](/media/Lab3-14.jpg)
+
+6- Finally ask the agent to download a word document version of the contract. The agent should respond with a link to download the word document version of the contract.
+
+![Agent Response](/media/Lab3-15.jpg)
+
+7- **Analysis:** Click on the `analysis` hyperlink to view the code that was executed in the sandbox/secure environment to create and download the contract document. You can see the code that was executed to generate the document for Contoso download the file using the `OpenAI Assistant` that was added as a capability to the agent.
+
+![Agent Response](/media/Lab3-16.jpg)
+
