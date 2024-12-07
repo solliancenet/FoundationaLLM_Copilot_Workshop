@@ -1,8 +1,14 @@
 # FoundationaLLM Custom Copilot Workshop
 This is the content for the 1 day workshop of FoundationaLLM Custom Copilot for Microsoft
 
+> [!IMPORTANT]
+> FoundationaLLM release cycle is every 2 weeks, so the content may change and be updated frequently until the first delivery on January 31st 2025 in New York City.
+
+> [!NOTE]
+> This repository is private and only available to the Microsoft team and the FoundationaLLM team. It will be available to attendees during the workshops only.
+
 ## Requirements
-  We need an instance of 50 users available and ready for the workshop
+  50 Entra IDs will be generated for the attendees to use during the workshop. The attendees will be able to use the Entra ID to login to the Management Portal and Chat Portal. A spreadheet will be shared with the attendees with the Entra ID and the password to register their name for one of the IDs.
 
 ## Agenda
 **Lecture1:** Where everything is, how to deploy (no deployment), Explain the resource Group and its resources and demonstrate the Management Portal, including Branding.
