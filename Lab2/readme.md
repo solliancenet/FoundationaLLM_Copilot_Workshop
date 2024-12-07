@@ -67,6 +67,13 @@ In this Task we will start a chat session with an agent in the chat portal.  Sel
 - Upload the file `Sample_10k_Income.xlsx` from the data folder and ask the following prompt:
 - **Prompt:** Create a bar chart comparing the `total interest income` versus the `salaries and other personnel expense` by year
 
+### Image recognition - Analytics
+
+- Upload the image `cat_selfie.jpg` from the data folder and ask the following prompt:
+- **prompt:** Why is this photo funny?
+
+![Cat Selfie](/data/cat_selfie.jpg)
+
 ## Task3: Branding
 
 In this task, we will explore the branding capabilities of the Chat Portal.  We will change the logo and the color scheme of the Chat Portal.

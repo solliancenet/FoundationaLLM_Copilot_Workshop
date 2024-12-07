@@ -15,11 +15,11 @@ This is the content for the 1 day workshop of FoundationaLLM Custom Copilot for 
 
 **Lab1:** Management Portal Discovery and capabilities - RBAC - Permission and Access (Share between 2 users to give access to each other)
 
-**Lecture2:** Demonstrate the Chat Portal and it capabilities
+**Lecture2:** Demonstrate the Chat Portal and its capabilities
 
 **Lab2:** Chat Portal Discovery and capabilities
 > [!NOTE]
-> Lab 1 and 2 will excersise 10 to 15 different excercises from generation of code to 10k analylics, to image recognition, to Chain of thought, etc...
+> Lab 1 and 2 will excersise 7 different excercises from generation of code to 10k analylics, to image recognition, to Chain of thought, etc...
 
 **Lecture3:** Explain the GatewayAPI, OrchestrationAPI and other APIs that make up the platform and demonstrate the creation of an Agent and every aspect of choices in the management Portal.
 
