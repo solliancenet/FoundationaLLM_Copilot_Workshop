@@ -2,6 +2,9 @@
 
 In this lab, we will explore the Management Portal and its capabilities. We will also look at Role-Based Access Control (RBAC) and how to share permissions and access between two users.
 
+> [!NOTE]
+> To start this lab, the presenter will go through a demonstration of the Management Portal and its capabilities. The attendees will then be asked to perform 4 tasks in the lab guide.
+
 ### Task 1: Management Portal Discovery
 Visit the Management portal site and log in with the credentials that you were provided. Once logged in, explore the portal and familiarize yourself with the different sections and features.
 
