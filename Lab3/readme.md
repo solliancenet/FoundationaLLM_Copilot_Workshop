@@ -18,3 +18,8 @@ it can be used to generate contract templates and specific contracts with detail
 - That means we will target the LLM directly with our questions with no embedding or vectorization of content at this time.
 
 ![Knowledge Source](/media/Lab3-3.jpg)
+
+4- **Agent Configuration**:
+- For the `Conversation History` **enable** the conversation history and set the maximum Message to 10. This will allow the user to include the last 10 messages in the prompt in the chat portal.
+
+![Conversation History](media/Lab3-4.jpg)
