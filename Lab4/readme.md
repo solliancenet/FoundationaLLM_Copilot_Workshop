@@ -15,7 +15,7 @@ For now, we use a POSTMAN Collection to create a new datasource and upload docum
 > As you have no access to the Azure Resource Group during the workshop, we added the documents to the storage account for you. You will use the POSTMAN collection to create the datasource and the vectorization profile.
 
 2. **Open POSTMAN**: Open the POSTMAN application and import the collection `New York Workshop Demo.postman_collection.json` that was provided to you in the `data` folder.
-3. This collection will allow you to create the datasource, the Vectroization profile and the invoke the Vectorization pipeline to create the indexes in Azure AI Search.
+3. This collection will allow you to create the datasource, the Vectroization profile and invoke the Vectorization pipeline to create the indexes in Azure AI Search.
 
 ![POSTMAN Collection](/media/Lab4-1.jpg)
 
