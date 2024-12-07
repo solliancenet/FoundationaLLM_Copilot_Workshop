@@ -74,7 +74,7 @@ In this task, we will explore the branding capabilities of the Chat Portal.  We 
 Every possible `Branding` customization is available in the documentation at [Branding Customization](https://docs.foundationallm.ai/setup-guides/branding/branding-management-portal.html) for you to experiment with.
 
 > [!NOTE]
-> We recommend that you experiement with the branding capabilities in the Chat Portal to get a feel for the customization that is available to you but reset it after you are done as the portal is shared with other attendees.
+> We recommend that you experiement with the branding capabilities in the Manamagement Portal to get a feel for the customization that is available to you but reset it after you are done as the portal is shared with other attendees.
 
 
 
