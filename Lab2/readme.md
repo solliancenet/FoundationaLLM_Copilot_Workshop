@@ -32,7 +32,7 @@ In this Task we will start a chat session with an agent in the chat portal.  Sel
 
 2- **Type Question**: In the chat user prompt, type a question for the agent.  You can ask anything you like. Example: `Why is the sky blue?`  just to get a feel for the interaction.
 
-3- **Try the following prompts (questions)**: 
+3- **Try the following prompt (questions)**: 
 
 ### Code Interpreter with OpenAI Assistant
 
@@ -47,6 +47,10 @@ In this Task we will start a chat session with an agent in the chat portal.  Sel
 - Upload the file `ed_thorp_beatthemarket.docx` which is the Ed Thorp beat the market book and ask using the prompt `show the size/num pages of the doc`
 - Follow that response with the prompt `Summarize this book?`
 - Finally, ask `What is a "call?"` this will demonstrates context awareness as `call` would typically be interpreted as a phone call
+
+### Summarization of a document
+
+- Upload the file `curious_cat_story.pdf` from the `data` folder and ask the following prompt: `Summarize this document`
 
 ### Generation of Graphs - Plotting
 

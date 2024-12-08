@@ -19,7 +19,7 @@ This is the content for the 1 day workshop of FoundationaLLM Custom Copilot for 
 
 **Lab2:** Chat Portal Discovery and capabilities
 > [!NOTE]
-> Lab 1 and 2 will excersise 7 different excercises from generation of code to 10k analylics, to image recognition, to Chain of thought, etc...
+> Lab 1 and 2 will excersise 8 different excercises from generation of code to 10k analylics, to image recognition, to summarization, etc...
 
 **Lecture3:** Explain the GatewayAPI, OrchestrationAPI and other APIs that make up the platform and demonstrate the creation of an Agent and every aspect of choices in the management Portal.
 
