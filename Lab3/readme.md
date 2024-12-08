@@ -3,6 +3,9 @@
 In this lab, we will explore the process of creating a new Agent in the Management Portal and then using it in the Chat Portal. We will also look at the capabilities of the OpenAI Assistant and how 
 it can be used to generate contract templates and specific contracts with details.
 
+> [!NOTE]
+> To start this lab, the presenter will go through a demonstration of creating an Agent in the Management Portal and explain all the options available. The attendees will then be asked to perform all the tasks in the lab guide.
+
 ### Task 1: Create an Agent with OpenAI Assistant capabilities
 
 1. **Navigate to the Management Portal**: Log in with the credentials that you were provided. Once logged in, head over to the left sidebar and click on `Create New Agent`.

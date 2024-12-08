@@ -2,6 +2,9 @@
 
 In this lab, we will explore the process of creating a new `datasource` with access to multiple documents and then using the `embedding` and  `vectorization` process and pipeline to create indexes in `Azure AI Search`. 
 
+> [!NOTE]
+> To start this lab, the presenter will go through a demonstration of invoking an embedding and vectorization of documents in an Azure storage account and explain all the options available through the Management Portal and through the API using POSTMAN. The attendees will then be asked to perform all the tasks in the lab guide.
+
 ### Task 1: Create a new Datasource
 
 By January 31st 2025, the Management portal in FoundationaLLM will have the capability to create a new datasource and upload multiple documents to the storage account using the user interface.

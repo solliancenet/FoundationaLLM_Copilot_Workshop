@@ -2,6 +2,9 @@
 
 In this lab, we will explore the ability to protect the conversation against `Hate`, `Violance`, `sexuality` and `Self Harm` while also protect sensitive information that should never be revealed or disclosed during a conversation. 
 
+> [!NOTE]
+> To start this lab, the presenter will go through a demonstration of enabling the Content safety and Data Protection features in the Management Portal and show their use in the Chat Portal. The attendees will then be asked to perform all the tasks in the lab guide.
+
 ### Task 1: Content Safety and Data Protection Enablement
 
 1- **Navigate to the Management Portal**: Log in with the credentials that you were provided. Once logged in, head over to the left sidebar and click on `All Agents`.
