@@ -40,7 +40,7 @@ it can be used to generate contract templates and specific contracts with detail
 
 ![OpenAI Assistant](/media/Lab3-8.jpg)
 
-- **Create an optionalcost center:** This is optional and can be used to track the cost of the agent. You can create a new cost center and call it `New York Workshop`. 
+- **Create an optional cost center:** This is optional and can be used to track the cost of the agent. You can create a new cost center and call it `New York Workshop`. 
 
 ![Cost Center](/media/Lab3-9.jpg)
 
@@ -50,7 +50,7 @@ it can be used to generate contract templates and specific contracts with detail
 
 5- **System Prompt**: 
 
-- **Set the System Prompt for the agent:** Give yoru agent a personality by setting the system prompt. This is the prompt that will be used to generate responses from the LLM. You can set the system prompt to `You are a professional and accurate agent that responds to questions with knowledge and respect.`.
+- **Set the System Prompt for the agent:** Give your agent a personality by setting the system prompt. This is the prompt that will be used to generate responses from the LLM. You can set the system prompt to `You are a professional and accurate agent that responds to questions with knowledge and respect.`.
 
 ![System Prompt](/media/Lab3-11.jpg)
 
