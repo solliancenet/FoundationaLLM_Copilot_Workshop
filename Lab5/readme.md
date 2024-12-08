@@ -8,3 +8,9 @@ In this lab, we will explore the ability to protect the conversation against `Ha
 2- **Select your Agent**: Click on the `Edit` gear for the agent that you created for customer service.
 
 ![Edit Agent](/media/Lab5-1.jpg)
+
+3- **Content Safety**:
+
+Head to the section of the `Gatekeeper` and enable the `Content Safety` and `Data Protection` features. Choose `Azure Content Safety` and `Microsoft Presidio` respectively.
+
+![Gatekeeper](/media/Lab5-2.jpg)
