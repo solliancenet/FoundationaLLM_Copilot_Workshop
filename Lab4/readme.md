@@ -22,7 +22,7 @@ For now, we use a POSTMAN Collection to create a new datasource and upload docum
 ### Task 2: Create a new Agent
 
 1. **Navigate to the Management Portal**: Log in with the credentials that you were provided. Once logged in, head over to the left sidebar and click on `Create New Agent`.
-2. **Fill in the Agent details**: Fill in the first 3 details for the new Agent. You can name it with your own name + `CustomerService` so it does not conflict with the other agents created by the rest of the attendees and provide a description like `Agent with Customer Service RAG for the New York Workshop`.  finaly, enter a welcome message display in the chat portal when a user starts a new conversation with the agent. If a message is not provided, the default welcome message will be displayed which is `Start the conversation using the text box below.`
+2. **Fill in the Agent details**: Fill in the first 3 details for the new Agent. You can name it with your own name + `CustomerService` so it does not conflict with the other agents created by the rest of the attendees and provide a description like `Agent with Customer Service RAG for the New York Workshop`.  finaly, enter a welcome message display for the chat portal when a user starts a new conversation with the agent, somethis like `Welcome to the Customer Service agent that is augmented by customer service documents from Contoso, please start your conversation below`. If a message is not provided, the default welcome message will be displayed which is `Start the conversation using the text box below.`
 
 ![Agent Details](/media/Lab4-2.jpg)
 
